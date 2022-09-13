@@ -6,9 +6,7 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { authOperations } from 'redux/auth';
 import { PrivateRoute } from 'components/PrivateRoute';
-import ContactForm from 'components/ContactForm';
-import Filter from 'components/Filter';
-import ContactList from 'components/ContactList';
+import ContactView from 'components/ContactView/ContactView';
 import { PublicRoute } from 'components/PublicRoute';
 
 function App() {
@@ -44,9 +42,7 @@ function App() {
           path="contacts"
           element={
             <PrivateRoute>
-              <ContactForm />
-              <Filter title="Find contact by name" />
-              <ContactList />
+              <ContactView/>
             </PrivateRoute>
           }
         />
